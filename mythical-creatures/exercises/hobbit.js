@@ -8,10 +8,11 @@ class Hobbit {
     }
     celebrateBirthday() {
         this.age++
-        if (this.age > 32) {
+        if (this.age > 32) { //conditionals starts with an if (if-block), and then will check for the 
             this.old = false
             this.adult = true
-        } if (this.age > 100) { //why is it that if i put "else if," it returns false rather, it passes with just an "if"?
+        } 
+        if (this.old === false && this.age > 100) { //why is it that if i put "else if," it returns false rather, it passes with just an "if"?
             return this.old = true
         }
     }
