@@ -7,9 +7,8 @@ class Pirate {
         this.rob = 0 //new var to count for robShip function
     }
     robShip() {
-        this.rob++
         // if (this.booty <= 500) { //returns 600 
-        if (this.booty >= 6) {
+        if (this.booty >= 500) {
             this.cursed = true
             return 'ARG! I\'ve been cursed!'
         }
