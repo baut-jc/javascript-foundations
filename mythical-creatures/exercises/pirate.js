@@ -4,10 +4,8 @@ class Pirate {
         this.job = job || 'scallywag'
         this.cursed = false
         this.booty = 0
-        this.rob = 0 //new var to count for robShip function
     }
     robShip() {
-        // if (this.booty <= 500) { //returns 600 
         if (this.booty >= 500) {
             this.cursed = true
             return 'ARG! I\'ve been cursed!'
@@ -15,7 +13,13 @@ class Pirate {
         this.booty += 100
         return 'YAARRR!'
     }
-        
+    liftCurse() {
+        this.booty = 200
+        this.cursed = false
+        return 'Your curse has been lifted!'
+    }
+    
+       
 }
 
 
