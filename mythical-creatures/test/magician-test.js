@@ -4,12 +4,12 @@ var Magician = require('../exercises/magician');
 describe('Magician', function() {
 // Oh no! It looks like there's no text in the `it` blocks! I guess you'll have to read the tests SUPER carefully to know what the test is expecting!
 
-it.skip('', function() {
+it('', function() {
     assert.isFunction(Magician);
     assert.instanceOf(new Magician({}), Magician);
   });
 
-it.skip('', function() {
+it('', function() {
     var magician1 = new Magician({ name: 'Scott' });
     var magician2 = new Magician({ name: 'Casey' });
 
@@ -17,7 +17,7 @@ it.skip('', function() {
     assert.equal(magician2.name, 'The Great Casey');
   });
 
-it.skip('', function() {
+it('Should have a key pair assistant', function() {
     var magician1 = new Magician({ name: 'Scott', assistant: true });
     var magician2 = new Magician({ name: 'Casey', assistant: false });
 
@@ -28,29 +28,31 @@ it.skip('', function() {
     assert.equal(magician2.assistant, false);
   });
 
-it.skip('', function() {
+it('Should have a key pair favoriteaccessory and a default top hat', function() {
     var magician = new Magician({ name: 'Scott' });
 
     assert.equal(magician.favoriteAccessory, 'top hat');
   });
 
-it.skip('', function() {
+it('Should have a object key call clothing', function() {
     var magician = new Magician({ name: 'Casey', clothing: 'cape' });
 
     assert.equal(magician.favoriteAccessory, 'cape')
   });
 
-it.skip('', function() {
+it('Should have a function to perform incantation', function() {
     var magician = new Magician({ name: 'Scott' });
 
     var spell = magician.performIncantation('abracadabra');
     var charm = magician.performIncantation('allakazaam')
 
+   
+
     assert.equal(spell, 'ABRACADABRA!');
     assert.equal(charm, 'ALLAKAZAAM!');
   });
 
-it.skip('', function() {
+it('should perform a trick depending on the clothing', function() {
     var magician1 = new Magician({ name: 'Hannah' });
     var magician2 = new Magician({ name: 'Kayla', clothing: 'top hat' });
 
@@ -61,7 +63,7 @@ it.skip('', function() {
     assert.equal(spell2, 'PULL RABBIT FROM TOP HAT');
   });
 
-it.skip('', function() {
+it('should do a different trick based on clothing', function() {
     var magician = new Magician({ name: 'Leta', clothing: 'cape' });
 
     var spell = magician.performTrick();
@@ -69,13 +71,13 @@ it.skip('', function() {
     assert.equal(spell, 'PULL DOVE FROM SLEEVE');
   });
 
-it.skip('', function() {
+it('should pass a new property in an object', function() {
     var magician = new Magician({ name: 'Leta' });
 
     assert.equal(magician.confidencePercentage, 10);
   });
 
-it.skip('', function() {
+it('should add 10 percent to confidence when it performs trick.', function() {
     var magician = new Magician({ name: 'Leta' });
 
     magician.performTrick();
@@ -89,23 +91,28 @@ it.skip('', function() {
     assert.equal(magician.confidencePercentage, 50);
   });
 
-it.skip('', function() {
+it('should return a string depending on number of times it performs tricks', function() {
     var magician = new Magician({ name: 'Scott', assistant: true });
 
     assert.equal(magician.performShowStopper(), 'Oh no, this trick is not ready!');
 
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 10; i++) { //this.confidence > 10
       magician.performTrick();
-    }
+     
+    } //what is the purpose of this for-loop
 
     assert.equal(magician.performShowStopper(), 'WOW! The magician totally just sawed that person in half!');
   });
 
-it.skip('', function() {
+it('should ', function() {
     var magician1 = new Magician({ name: 'Scott', assistant: false });
     var magician2 = new Magician({ name: 'Hannah', assistant: true });
 
-    assert.equal(magician1.performShowStopper(), 'Oh no, this trick is not ready!');
+
+
+
+
+
     assert.equal(magician2.performShowStopper(), 'Oh no, this trick is not ready!');
 
     for (var i = 0; i < 10; i++) {
