@@ -104,14 +104,9 @@ it('should return a string depending on number of times it performs tricks', fun
     assert.equal(magician.performShowStopper(), 'WOW! The magician totally just sawed that person in half!');
   });
 
-it('should ', function() {
+it('should be able to perform show stopping show with assistant', function() {
     var magician1 = new Magician({ name: 'Scott', assistant: false });
     var magician2 = new Magician({ name: 'Hannah', assistant: true });
-
-
-
-
-
 
     assert.equal(magician2.performShowStopper(), 'Oh no, this trick is not ready!');
 

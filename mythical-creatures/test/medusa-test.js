@@ -32,7 +32,7 @@ describe('Medusa', function() {
   it('should start with no statues', function() {
     var medusa = new Medusa('Amy');
 
-    assert.deepEqual(medusa.statues, []);
+    assert.deepEqual(medusa.statues, []); //used when the outcome is an array or an object.
   });
 
   // STOP! Skip down to the bottom of the file and pass the tests for Person and Statue!
@@ -65,7 +65,7 @@ describe('Medusa', function() {
     medusa.gazeAtVictim(victim4);
 
     assert.equal(medusa.statues.length, 3);
-    assert.instanceOf(medusa.statues[0], Statue);
+    assert.instanceOf(medusa.statues[0], Statue); //new instance of Statue is being pushed to the medusa statues property that holds an array.
     assert.instanceOf(medusa.statues[1], Statue);
     assert.instanceOf(medusa.statues[2], Statue);
   });
@@ -95,7 +95,7 @@ describe('Medusa', function() {
     assert.deepEqual(medusa.statues, [statue2, statue3, statue4]);
   });
 
-  it.skip('should return a freed statue to Person form', function() {
+  it('should return a freed statue to Person form', function() {
     var medusa = new Medusa('Hannah');
     var victim1 = new Person('Pam');
     var victim2 = new Person('Khalid');
