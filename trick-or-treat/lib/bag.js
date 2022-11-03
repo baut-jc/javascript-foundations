@@ -10,10 +10,11 @@ class Bag {
     return sweets.type
   }
   contains(sweets) {  
-    if (sweets.type === 'Lindt Chocolate') {
-      return this.empty
-    } else {
-      return this.empty = false
+      if (sweets === 'Lindt Chocolate') {
+      // console.log(sweets.type, this.empty)
+      return true
+    } else if (sweets === 'Hershey\'s Kisses') {
+      return false
     }
   }
 }
